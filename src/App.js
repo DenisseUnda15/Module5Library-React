@@ -1,12 +1,12 @@
 import React from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Books from './pages/Books';
 import { books } from "./data";
 import BookInfo from './pages/BookInfo';
-import { Route, BrowserRouter as Router } from 'react-router-dom/cjs/react-router-dom';
+
 
 
 function App() {
@@ -14,9 +14,13 @@ function App() {
     <Router>
      <div className="App">
        <Nav />
+
+       <Switch>
        <Route path="/" exact component={Home} />
        <Route path="/books" render={() => <Books books={books} />} />
        <Route path="/books/1" render={()=> <BookInfo books={books} />} />
+       </Switch>
+
        <Footer />
     </div>
     </Router>

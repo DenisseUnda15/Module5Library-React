@@ -1,13 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import LibraryLogo from '../assets/Library.svg';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { Link } from 'react-router-dom';
 
-
-
-
-const Nav =() => {
-    function openMenu(){
+const Nav = () => {
+    function openMenu() {
         document.body.classList += " menu--open"
     }
 
