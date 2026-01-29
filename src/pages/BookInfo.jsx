@@ -17,7 +17,7 @@ function addBookToCart (book) {
 }
 
 function bookExistsOnCart(){
-    return cart?.find((book) => book.id === +id);
+    return cart.find((book) => book.id === +id);
 }
 
   
